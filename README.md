@@ -220,7 +220,7 @@ STORAGE_LOCAL_NET_IP=172.16.10.2
 
 `[root@compute1 ~]# vi /etc/openstack/openrc.sh` 
 
-[^compute1无需修改]: 
+[^compute1无需修改]: 注意
 
 
 
@@ -262,7 +262,7 @@ STORAGE_LOCAL_NET_IP=172.16.10.2
 
 `[root@compute2 ~]# vi /etc/openstack/openrc.sh` 
 
-[^compute2修改主机名，计算节点ip]: 
+[^compute2修改主机名，计算节点ip]: 注意
 
 
 
