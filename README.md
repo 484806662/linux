@@ -80,7 +80,7 @@ compute2
 
 `[root@controller ~]#  mkdir /tmp/yum`
 
-`[root@controller ~]# mv /etc/yum.repo.d/* /tmp/yum`
+`[root@controller ~]# mv /etc/yum.repo.d/* /tmp/yum/`
 
 `[root@controller ~]#  vi /etc/yum.repo.d/ftp.repo`
 
