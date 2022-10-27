@@ -121,7 +121,7 @@ Complete!
 
 `[root@compute1 ~]#  mkdir /tmp/yum`
 
-`[root@compute1 ~]# mv /etc/yum.repo.d/* /tmp/yum`
+`[root@compute1 ~]# mv /etc/yum.repos.d/* /tmp/yum`
 
 `[root@compute1 ~]# vi     /etc/yum.repos.d/yum.repo`
 
