@@ -1,0 +1,67 @@
+# 答案
+
+## 【题目 1】基础环境配置[0.5 分]
+
+```
+（1）设置控制节点主机名为 controller，设置计算节点主机名为 compute；
+
+（2）修改 hosts 文件将 IP 地址映射为主机名；
+
+完成后提交控制节点的用户名、密码和 IP 地址到答题框。
+```
+
+```
+[root@xxx ~]# hostnamectl sethostname controller
+
+[root@xxx ~]# hostnamectl sethostname compute
+
+[root@controller~]# bash
+
+[root@compute ~]# bash
+
+[root@controller ~]# vi /etc/hosts
+…
+192.168.200.12 controller
+192.168.200.21 compute
+
+[root@compute ~]# vi /etc/hosts
+…
+192.168.200.12 controller
+192.168.200.21 compute
+```
+
+## 【题目 2】Yum 源配置[0.5 分]
+
+```
+使用提供的 http 服务地址，在 http 服务下，存在 centos7.9 和 iaas 的网络 yum 源，使用
+该 http 源作为安装 iaas 平台的网络源。分别设置 controller 节点和 compute 节点的 yum 源文
+件 http.repo。完成后提交控制节点的用户名、密码和 IP 地址到答题框。
+```
+
+```
+[root@controller~]# rm -rf /etc/yum.repos.d/*
+
+[root@controller~]# vi /etc/yum.repos.d/http.repo
+
+[centos]
+
+name=centos
+
+baseurl=http://172.16.101.2/centos
+
+gpgcheck=0
+
+enabled=1
+
+[iaas]
+
+name=iaas
+
+baseurl=http://172.16.101.2/iaas/iaas-repo
+
+gpgcheck=0
+
+enabled=1
+```
+
+## 【题目 3】配置无秘钥 ssh[0.5 分]
